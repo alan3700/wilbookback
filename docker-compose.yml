@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  api:
+    build: ./
+    ports:
+      - 5000:5000
+    volumes:
+      - ./src:/app/src
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: supersecret
